@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  dev:
+    env:
+      CONFIG_PATH: ./config/local.yml
+    cmds:
+      - go run ./cmd/chat-api/main.go
+    
