@@ -2,12 +2,17 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/SklifCybe/chat/pkg/logger"
 )
 
 func main() {
 	fmt.Println("hello")
 
-    // todo: create logger (slog)
+    log := logger.New("local")
+
+    log.Info("hello")
+
     // todo: add docker
     // todo: init postgresql
     // todo: create router (chi)
