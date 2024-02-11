@@ -8,7 +8,8 @@ import (
 )
 
 type Config struct {
-	Env string `yaml:"env" env-required:"true"`
+	Env         string `yaml:"env" env-required:"true"`
+	DatabaseUrl string `yaml:"database_url" env-required:"true"`
 }
 
 func MustNew() *Config {

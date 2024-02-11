@@ -9,11 +9,11 @@ import (
 func main() {
 	fmt.Println("hello")
 
-    log := logger.New("local")
+	log := logger.New("local")
 
-    log.Info("hello")
+	log.Info("hello world")
 
-    // todo: add docker
-    // todo: init postgresql
-    // todo: create router (chi)
+	// todo: add docker
+	// todo: init postgresql
+	// todo: create router (chi)
 }

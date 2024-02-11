@@ -6,4 +6,16 @@ tasks:
       CONFIG_PATH: ./config/local.yml
     cmds:
       - go run ./cmd/chat-api/main.go
+  
+  docker-build:
+    cmds:
+      - docker build -t chat:latest -f ./build/docker/Dockerfile .
+
+  docker-up:
+    cmds:
+      - docker-compose -f ./build/docker/docker-compose.yml up -d
+
+  docker-down:
+    cmds:
+      - docker-compose -f ./build/docker/docker-compose.yml down
     
