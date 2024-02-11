@@ -28,4 +28,12 @@ tasks:
   docker-down:
     cmds:
       - docker-compose -f ./build/docker/docker-compose.yml down
+
+  migration-main:
+    env:
+      CONFIG_PATH: ./config/local.yml
+    cmds:
+      - "go run ./cmd/migrator \
+      --migration-path=./migrations/ \
+      --migrations-table=migrations"
     

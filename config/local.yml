@@ -1,2 +1,2 @@
 env: "local" # local, prod
-database_url: "postgresql://postgres:123456@localhost:5432/chat?schema=public"
+database_url: "postgresql://postgres:123456@localhost:5432/chat?sslmode=disable"
