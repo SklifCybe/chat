@@ -12,8 +12,5 @@ func main() {
 	log := logger.New("local")
 
 	log.Info("hello world")
-
-	// todo: add docker
-	// todo: init postgresql
 	// todo: create router (chi)
 }

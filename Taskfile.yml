@@ -5,8 +5,18 @@ tasks:
     env:
       CONFIG_PATH: ./config/local.yml
     cmds:
-      - go run ./cmd/chat-api/main.go
-  
+      - go run ./cmd/chatapi/main.go
+
+  run:
+    env:
+      CONFIG_PATH: ./config/local.yml
+    cmds:
+      - ./build/chatapi/main
+
+  build:
+    cmds:
+      - go build -v -o ./build/chatapi/main ./cmd/chatapi/main.go
+         
   docker-build:
     cmds:
       - docker build -t chat:latest -f ./build/docker/Dockerfile .
